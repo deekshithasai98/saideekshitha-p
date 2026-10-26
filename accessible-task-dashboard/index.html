@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Task Dashboard</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="app.js" defer></script>
+
+</head>
+
+<body>
+
+  <a href="#main" class="skip-link">Skip to content</a>
+
+  <header>
+
+    <h1>Task Dashboard</h1>
+
+    <p>A simple, accessible task manager.</p>
+
+    <button id="theme-toggle" type="button">Dark mode</button>
+
+  </header>
+
+  <main id="main">
+
+    <section>
+
+      <h2>Add a task</h2>
+
+      <form id="task-form">
+
+        <label for="task-title">Task name</label>
+
+        <input id="task-title" name="task-title" maxlength="120" required>
+
+        <button type="submit">Add task</button>
+
+      </form>
+
+      <p id="status-message" role="status" aria-live="polite"></p>
+
+    </section>
+
+    <section>
+
+      <h2>My tasks</h2>
+
+      <label for="task-filter">Filter tasks</label>
+
+      <select id="task-filter">
+
+        <option value="all">All tasks</option>
+
+        <option value="open">To do</option>
+
+        <option value="done">Completed</option>
+
+      </select>
+
+      <ul id="task-list">
+
+        <li>No tasks yet. Add your first task above.</li>
+
+      </ul>
+
+    </section>
+
+  </main>
+
+</body>
+
+</html>

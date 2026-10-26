@@ -1,0 +1,52 @@
+trigger:
+  branches:
+    include:
+      - main
+
+pr:
+  branches:
+    include:
+      - main
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  solution: '**/*.sln'
+  testProjects: '**/*Tests/*.csproj'
+
+steps:
+  - task: UseDotNet@2
+    displayName: 'Install .NET SDK'
+    inputs:
+      packageType: 'sdk'
+      version: '8.x'
+
+  - script: dotnet restore $(solution)
+    displayName: 'Restore dependencies'
+
+  - script: dotnet build $(solution) --configuration $(buildConfiguration) --no-restore
+    displayName: 'Build solution'
+
+  - script: |
+      if find . -path "$(testProjects)" -print -quit | grep -q .; then
+        find . -path "$(testProjects)" -print0 | xargs -0 -I {} dotnet test "{}" --configuration $(buildConfiguration) --no-build
+      else
+        echo "No test project found yet; add a test project to enable this stage."
+      fi
+    displayName: 'Run tests when test projects are present'
+
+  - script: |
+      mkdir -p "$(Build.ArtifactStagingDirectory)"
+      find . -name '*.csproj' -not -path '*/obj/*' -print0 | while IFS= read -r -d '' project; do
+        dotnet publish "$project" --configuration $(buildConfiguration) --output "$(Build.ArtifactStagingDirectory)/$(basename "$(dirname "$project")")"
+      done
+    displayName: 'Publish application artifacts'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish build artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'

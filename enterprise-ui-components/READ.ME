@@ -1,0 +1,24 @@
+# Azure DevOps CI/CD Reference
+
+A sample YAML pipeline for building and publishing the Task API project.
+
+## What the pipeline does
+
+- Installs the .NET SDK
+- Restores project dependencies
+- Builds the API in Release configuration
+- Publishes the application
+- Uploads the published files as a build artifact
+
+## Technologies
+
+- Azure DevOps Pipelines
+- YAML
+- .NET 8
+- GitHub source control
+
+## Before running
+
+Review the project path and SDK version. Configure any required permissions and deployment settings for your own environment.
+
+This example publishes a build artifact only. It does not deploy the application to Azure, and it has not yet been run in an Azure DevOps organization.

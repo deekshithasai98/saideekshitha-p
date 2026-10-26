@@ -1,0 +1,31 @@
+trigger:
+  - main
+
+pool:
+  vmImage: ubuntu-latest
+
+variables:
+  buildConfiguration: Release
+
+steps:
+  - task: UseDotNet@2
+    displayName: Install .NET SDK
+    inputs:
+      packageType: sdk
+      version: '8.x'
+
+  - script: dotnet restore dotnet-api-starter/TaskApiStarter.csproj
+    displayName: Restore packages
+
+  - script: dotnet build dotnet-api-starter/TaskApiStarter.csproj --configuration $(buildConfiguration) --no-restore
+    displayName: Build API
+
+  - script: dotnet publish dotnet-api-starter/TaskApiStarter.csproj --configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)/app
+    displayName: Publish application
+
+  - task: PublishBuildArtifacts@1
+    displayName: Publish build artifact
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)/app'
+      ArtifactName: drop
+      publishLocation: Container

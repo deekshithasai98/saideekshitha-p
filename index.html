@@ -1,149 +1,18 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Portfolio of Sai Deekshitha Telukuntla, Full-Stack .NET Developer focused on responsive UI, accessible experiences, APIs, and cloud delivery.">
-  <title>Sai Deekshitha Telukuntla | Full-Stack Developer</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Accessible Task Dashboard</title><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#top" aria-label="Sai Deekshitha home">SD<span>.</span></a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-      <div class="nav-links" id="nav-links">
-        <a href="#about">About</a>
-        <a href="#work">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#accessibility">Accessibility</a>
-        <a class="nav-cta" href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main id="main">
-    <section class="hero section container" id="top">
-      <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot" aria-hidden="true"></span> Full-Stack .NET Developer</p>
-        <h1>Building useful software with <span class="accent">thoughtful user experiences.</span></h1>
-        <p class="hero-intro">I’m Sai Deekshitha Telukuntla, a full-stack developer working across .NET services, modern front ends, APIs, and cloud delivery—with a focus on responsive, maintainable, and accessible applications.</p>
-        <div class="hero-actions">
-          <a class="button button-primary" href="#work">Explore projects <span aria-hidden="true">↗</span></a>
-          <a class="button button-secondary" href="#contact">Get in touch</a>
-        </div>
-        <div class="hero-tags" aria-label="Core technologies">
-          <span>C# / .NET</span><span>Angular</span><span>Azure</span><span>UI accessibility</span>
-        </div>
-      </div>
-      <aside class="hero-card" aria-label="Professional focus">
-        <div class="card-topline"><span>DEVELOPER PROFILE</span><span class="card-icon" aria-hidden="true">✳</span></div>
-        <div class="profile-mark" aria-hidden="true">SD</div>
-        <h2>Full stack. User focused.</h2>
-        <p>Connecting polished interfaces to dependable services and data.</p>
-        <div class="mini-stat-grid">
-          <div><strong>7+ yrs</strong><small>Development experience</small></div>
-          <div><strong>End-to-end</strong><small>UI to API to database</small></div>
-        </div>
-        <div class="card-line" aria-hidden="true"></div>
-        <p class="small-note">Portfolio examples are illustrative case studies based on technologies and responsibilities in my resume.</p>
-      </aside>
-    </section>
-
-    <section class="section section-muted" id="about">
-      <div class="container two-column">
-        <div>
-          <p class="eyebrow">01 / ABOUT</p>
-          <h2 class="section-title">Engineering that considers the person using it.</h2>
-        </div>
-        <div class="section-copy">
-          <p>I build and support enterprise applications with C#, ASP.NET Core/MVC, REST APIs, SQL Server, and frameworks such as Angular. I enjoy making complex workflows clearer through reusable components, responsive layouts, consistent validation, and dependable integrations.</p>
-          <p>My approach brings front-end usability together with backend quality: maintainable code, automated testing, secure API patterns, and delivery pipelines that help teams release with confidence.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="work">
-      <div class="section-heading">
-        <div><p class="eyebrow">02 / SELECTED WORK</p><h2 class="section-title">Project case studies</h2></div>
-        <p class="section-subtitle">Representative concepts, not client-owned screenshots or public production systems.</p>
-      </div>
-      <div class="project-grid">
-        <article class="project-card project-featured">
-          <div class="project-art art-accessible" aria-hidden="true">
-            <div class="mock-window"><div class="mock-bar"><i></i><i></i><i></i><span>Application overview</span></div><div class="mock-content"><div class="mock-sidebar"></div><div class="mock-main"><div class="mock-heading"></div><div class="mock-line"></div><div class="mock-line short"></div><div class="mock-form"><b></b><b></b><b></b></div><div class="mock-button"></div></div></div></div>
-          </div>
-          <div class="project-content">
-            <p class="project-type">UI / ACCESSIBILITY</p><h3>Accessible enterprise workflow</h3>
-            <p>Concept for a responsive workflow interface using clear form labels, logical heading structure, keyboard-friendly controls, visible focus states, and understandable validation feedback.</p>
-            <ul class="tag-list"><li>Angular</li><li>HTML5 / CSS3</li><li>WCAG principles</li></ul>
-            <details class="case-details"><summary>View case-study notes</summary><p><strong>Design goal:</strong> make common tasks easier to scan and complete. <strong>Implementation focus:</strong> semantic markup, consistent form patterns, responsive layout, and manual keyboard checks. Formal conformance has not been independently audited.</p></details>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-art art-api" aria-hidden="true"><div class="api-stack"><span>UI</span><b>↔</b><span>REST API</span><b>↔</b><span>SQL</span></div><div class="api-caption">SERVICE INTEGRATION</div></div>
-          <div class="project-content">
-            <p class="project-type">BACKEND / INTEGRATION</p><h3>.NET API service layer</h3>
-            <p>Reference architecture for separating controllers, business services, and data access to keep enterprise application workflows testable and maintainable.</p>
-            <ul class="tag-list"><li>C#</li><li>ASP.NET Core</li><li>SQL Server</li></ul>
-            <details class="case-details"><summary>View case-study notes</summary><p>Focus areas include REST conventions, input validation, clear error responses, separation of concerns, and unit testing. Add a public code sample here once a sanitized demo repository is ready.</p></details>
-          </div>
-        </article>
-        <article class="project-card">
-          <div class="project-art art-cloud" aria-hidden="true"><div class="cloud-shape">☁</div><div class="pipeline"><span>Commit</span><i></i><span>Build</span><i></i><span>Test</span><i></i><span>Deploy</span></div></div>
-          <div class="project-content">
-            <p class="project-type">CLOUD / DELIVERY</p><h3>Automated release pipeline</h3>
-            <p>Deployment workflow concept showing how source control, automated checks, and cloud hosting can support predictable full-stack releases.</p>
-            <ul class="tag-list"><li>Azure DevOps</li><li>CI/CD</li><li>Azure</li></ul>
-            <details class="case-details"><summary>View case-study notes</summary><p>Pipeline stages can include restore/build, automated tests, artifact publishing, deployment approvals, and post-deployment validation. Environment-specific secrets should be stored in secure variable groups or a secrets manager.</p></details>
-          </div>
-        </article>
-      </div>
-      <p class="disclaimer">These case studies describe representative approaches based on my experience. They are not presented as published client deliverables or independently verified project outcomes.</p>
-    </section>
-
-    <section class="section section-dark" id="skills">
-      <div class="container">
-        <p class="eyebrow eyebrow-light">03 / TOOLKIT</p>
-        <h2 class="section-title">From interface to infrastructure.</h2>
-        <div class="skills-grid">
-          <div class="skill-block"><span class="skill-number">01</span><h3>Front end</h3><p>Angular, TypeScript, JavaScript, HTML5, CSS3, Bootstrap, responsive layouts, reusable components</p></div>
-          <div class="skill-block"><span class="skill-number">02</span><h3>Application & APIs</h3><p>C#, .NET / ASP.NET Core, MVC, Web API, REST, Entity Framework, LINQ</p></div>
-          <div class="skill-block"><span class="skill-number">03</span><h3>Data</h3><p>SQL Server, Azure SQL, relational data modeling, query tuning, stored procedures</p></div>
-          <div class="skill-block"><span class="skill-number">04</span><h3>Cloud & quality</h3><p>Azure, Azure DevOps, CI/CD, Git, Docker, NUnit, xUnit, Selenium, production troubleshooting</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section container" id="accessibility">
-      <div class="two-column accessibility-layout">
-        <div><p class="eyebrow">04 / ACCESSIBILITY</p><h2 class="section-title">Accessibility is part of the build—not a last-minute fix.</h2></div>
-        <div class="accessibility-panel">
-          <p>My UI development approach considers accessibility from the start and aims to align with WCAG 2.1 AA principles.</p>
-          <ul class="check-list">
-            <li><span aria-hidden="true">✓</span> Semantic HTML and logical heading order</li>
-            <li><span aria-hidden="true">✓</span> Labels, instructions, and useful error messages</li>
-            <li><span aria-hidden="true">✓</span> Keyboard navigation and visible focus states</li>
-            <li><span aria-hidden="true">✓</span> Responsive layouts and clear interaction states</li>
-            <li><span aria-hidden="true">✓</span> Manual review plus automated checks where available</li>
-          </ul>
-          <p class="small-note">Accessibility claims should be backed by testing on each specific project; this portfolio does not claim a formal third-party audit or certification.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
-      <div class="container contact-inner">
-        <p class="eyebrow eyebrow-light">05 / CONTACT</p>
-        <h2>Let’s build something useful.</h2>
-        <p>For full-stack .NET, front-end, or UI-focused engineering opportunities, reach out by email.</p>
-        <a class="button button-light" href="mailto:deekshitha0619@gmail.com">deekshitha0619@gmail.com <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer"><div class="container footer-inner"><span>© <span id="year"></span> Sai Deekshitha Telukuntla</span><a href="#top">Back to top ↑</a></div></footer>
-  <script src="script.js"></script>
-</body>
-</html>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="topbar"><div class="brand"><span class="logo">A</span> AccessBoard</div><nav aria-label="Main navigation"><a class="active" href="#main">Overview</a><a href="#tasks">My tasks</a><a href="#help">Help</a></nav><button id="themeToggle" class="outline" type="button" aria-pressed="false">Dark mode</button></header>
+<main id="main" class="wrap">
+<section class="welcome"><div><p class="eyebrow">MONDAY · WORKSPACE</p><h1>Good morning, Deekshitha <span aria-hidden="true">✦</span></h1><p class="muted">A clear view of what needs your attention today.</p></div><button class="primary" id="newTask">+ Add task</button></section>
+<section class="stats" aria-label="Task summary"><article><span class="muted">Open tasks</span><strong id="openCount">4</strong><small>Across your workspace</small></article><article><span class="muted">Completed</span><strong id="doneCount">2</strong><small>Nice progress</small></article><article><span class="muted">Due today</span><strong id="dueCount">2</strong><small>Keep them moving</small></article></section>
+<section class="panel" id="tasks"><div class="panel-head"><div><p class="eyebrow">YOUR WORK</p><h2>Task list</h2></div><label class="filter-label" for="filter">Show <select id="filter"><option value="all">All tasks</option><option value="open">Open only</option><option value="done">Completed only</option></select></label></div>
+<form id="taskForm" class="add-form" hidden><label for="taskInput">Task name</label><div><input id="taskInput" maxlength="100" required placeholder="e.g. Review API validation"><button class="primary" type="submit">Add</button><button class="outline" id="cancelAdd" type="button">Cancel</button></div></form>
+<ul id="taskList" class="task-list" aria-label="Tasks"></ul><p id="emptyState" class="muted" hidden>No tasks match this filter.</p><p id="status" class="sr-only" role="status" aria-live="polite"></p></section>
+<section id="help" class="tip"><div class="tip-icon" aria-hidden="true">✓</div><div><h2>Designed for everyone</h2><p>Keyboard-friendly controls, visible focus indicators, clear labels, and responsive layouts are built into this demo.</p></div></section>
+<footer>Demo project · HTML, CSS, JavaScript · No personal or client data</footer>
+</main><script src="app.js"></script></body></html>
